@@ -2,54 +2,6 @@
 outline: deep
 ---
 
-# Runtime API Examples
+# 前言
 
-This page demonstrates usage of some of the runtime APIs provided by VitePress.
-
-The main `useData()` API can be used to access site, theme, and page data for the current page. It works in both `.md` and `.vue` files:
-
-```md
-<script setup>
-import { useData } from 'vitepress'
-
-const { theme, page, frontmatter } = useData()
-</script>
-
-## Results
-
-### Theme Data
-
-<pre>{{ theme }}</pre>
-
-### Page Data
-
-<pre>{{ page }}</pre>
-
-### Page Frontmatter
-
-<pre>{{ frontmatter }}</pre>
-```
-
-<script setup>
-import { useData } from 'vitepress'
-
-const { site, theme, page, frontmatter } = useData()
-</script>
-
-## Results
-
-### Theme Data
-
-<pre>{{ theme }}</pre>
-
-### Page Data
-
-<pre>{{ page }}</pre>
-
-### Page Frontmatter
-
-<pre>{{ frontmatter }}</pre>
-
-## More
-
-Check out the documentation for the [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).
+博主作为一个前端开发工程师，深知成长的重要，现市场上大多数是 api 工程师;就是只会用 api 并不了解原理，长此以往就成为了可替代的人，如何成为一个高级开发工程师！成为一个高级开发工程师需要会那些知识！ 跟着我的博客去学习，能让你了解 web 全栈工程师的知识体系，让自己的学习有方向。
