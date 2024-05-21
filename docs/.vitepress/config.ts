@@ -138,6 +138,22 @@ function sidebarFrontEnd() {
           text: "Generator 函数及其异步的应用",
           link: "/front-end/Generator 函数及其异步的应用",
         },
+        {
+          text: "深入理解 async,await",
+          link: "/front-end/深入理解 async,await",
+        },
+        {
+          text: "手写 Promise",
+          link: "/front-end/手写 Promise",
+        },
+        {
+          text: "Web Workers 的多线程机制",
+          link: "/front-end/Web Workers 的多线程机制",
+        },
+        {
+          text: "Service Workers",
+          link: "/front-end/Service Workers",
+        },
       ],
     },
   ];
