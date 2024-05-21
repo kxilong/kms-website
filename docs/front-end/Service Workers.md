@@ -131,7 +131,7 @@ browser-sync start --server # 在3.9文件夹下
 
 4. 打开地址：http://localhost:3000
 
-![](~@/jsasvanced/sw1.png)
+![](./public/sw1.d77ae24b.png)
 
 5. 关闭服务
 
