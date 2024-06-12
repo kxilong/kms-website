@@ -1,0 +1,50 @@
+# 给 Promise 增加取消功能
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="send">Send</button>
+    <button id="cancel">Cancel</button>
+
+    <script>
+      const sendButton = document.querySelector("#send");
+      const cancelButton = document.querySelector("#cancel");
+
+      class CancelToken {
+        constructor(cancelFn) {
+          this.promise = new Promise((resolve, reject) => {
+            cancelFn(() => {
+              console.log("delay cancelled");
+              resolve();
+            });
+          });
+        }
+      }
+
+      function cancellableDelayedResolve(delay) {
+        console.log("prepare send request");
+        return new Promise((resolve, reject) => {
+          const id = setTimeout(() => {
+            console.log("ajax get data");
+            resolve();
+          }, delay);
+
+          const cancelToken = new CancelToken((cancelCallback) =>
+            cancelButton.addEventListener("click", cancelCallback)
+          );
+          cancelToken.promise.then(() => clearTimeout(id));
+        });
+      }
+      sendButton.addEventListener("click", () =>
+        cancellableDelayedResolve(1000)
+      );
+    </script>
+  </body>
+</html>
+```

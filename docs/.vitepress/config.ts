@@ -56,6 +56,7 @@ export default defineConfig({
 
     sidebar: {
       "/front-end/": sidebarFrontEnd(),
+      "/interview/": sidebarInterView(),
       "/bywork/": sidebarByWork(),
     },
 
@@ -77,6 +78,7 @@ export default defineConfig({
 function nav() {
   return [
     { text: "前端", link: "/front-end/" },
+    { text: "面试", link: "/interview/" },
     { text: "副业", link: "/bywork/" },
   ];
 }
@@ -153,6 +155,29 @@ function sidebarFrontEnd() {
         {
           text: "Service Workers",
           link: "/front-end/Service Workers",
+        },
+      ],
+    },
+  ];
+}
+
+function sidebarInterView() {
+  return [
+    {
+      text: "前言",
+      link: "/interview/",
+    },
+    {
+      text: "Javascript",
+      collapsed: false,
+      items: [
+        {
+          text: "请求并发",
+          link: "/interview/请求并发",
+        },
+        {
+          text: "给Promise增加取消功能",
+          link: "/interview/给 Promise 增加取消功能",
         },
       ],
     },
